@@ -2,9 +2,11 @@
 In my case, I would be manually setting up the hadoop ecosystem as the following.
 
 	a) Install Hadoop any version greater than 2.9 and follow the steps associated with its setup. The below resource is really helpful to setup one.
+	
 	https://kontext.tech/column/hadoop/246/install-hadoop-300-in-windows-single-node
 
 	b) Install Hive any version greater than 2.9 and follow the steps associated with its setup. The below resource is really helpful to setup one. I used derby as my database as its inbuilt.
+	
 	https://kontext.tech/column/hadoop/291/apache-hive-300-installation-on-windows-10-step-by-step-guide
 
 	c) Install cygwin to run your linux commands while working.	
@@ -38,15 +40,19 @@ In my case, I would be manually setting up the hadoop ecosystem as the following
 	2) Our calculations demand Spark jobs so for this, we created a package named msd-spark package contains the relevant spark related files. 
 	The MSDDriver.java program needs to be run to calculate the above and save onto Hive through Springboot. For more information, refer to the msd-spark package in GitHub. A jar file has been provided which can be run to start a Spark application using following command.
 
-	./spark-submit --master yarn  --name core-engine-c2  --class com.hive.driver.MSDDriver  --deploy-mode cluster  --num-executors 2 --executor-memory 1G --executor-cores 2  --driver-memory 1G --driver-cores 1 /target/msd-spark-0.0.1-SNAPSHOT.jar
+	./spark-submit --master yarn  --name core-engine-c2  --class com.hive.driver.MSDDriver  --deploy-mode cluster  --num-executors 2 	--executor-memory 1G --executor-cores 2  --driver-memory 1G --driver-cores 1 /target/msd-spark-0.0.1-SNAPSHOT.jar
 
 4) For the front end, ReactJS has been used. For setting up ReactJs in your machine, steps as the following needs to be executed.
 
-	>npx create-react-app my-app
-	>cd my-app
-	>npm add axios
-	>npm add react-router-dom
-	>npm start
+	npx create-react-app my-app
+	
+	cd my-app
+	
+	npm add axios
+	
+	npm add react-router-dom
+	
+	npm start
 
 	Once done, install the Advanced Rest Client plugin for Chrome which will aid in calling REST Services.
 	Finally, when you are done setting up the ReactJS component and putting the relevant changes as given in the GitHub URL. Run the following url to see the result.
