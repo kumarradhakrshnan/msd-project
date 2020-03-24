@@ -44,7 +44,7 @@ In my case, I would be manually setting up the hadoop ecosystem as the following
 
 4) For the front end, ReactJS has been used. For setting up ReactJs in your machine, steps as the following needs to be executed.
 
-	npx create-react-app my-app
+	npx create-react-app msd-reactjs
 	
 	cd my-app
 	
